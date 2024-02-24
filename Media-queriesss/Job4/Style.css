@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    background-color: beige;
+    height: 60px;
+}
+.icon, input{
+    display: none;
+}
+.nav-menu{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 20px;
+}
+.nav-item{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    font-size: 1.3em;
+    color: black;
+}
+a:hover{
+    color: brown;
+}
+@media screen and (max-width:767px){
+    .navbar{
+        position: relative;
+    }
+    .icon{
+        cursor: pointer;
+    }
+    .navbar input, .nav-menu{
+        display: none; /*permet de cacher l'input de la navbar (la checkbox cochable)*/
+    }
+    [id^=btn]:checked+ ul{   /* ^= veulent dire commence par suivi de btn pour aller chercher tout les id commancant par btn checked pour dire que lorsqu'il est cocher ont applique a l'ul display block*/
+        display: block;
+    }
+    .nav-menu{
+        position: absolute;
+        background-color: rgba(245, 245, 220, 0.745);
+    }
+    .icon, input{
+        display: block;
+        padding: 10px;
+    }
+    a{
+        font-size: 1em;
+    }
+    .nav-item{
+        padding-bottom: 10px;
+    }
+}

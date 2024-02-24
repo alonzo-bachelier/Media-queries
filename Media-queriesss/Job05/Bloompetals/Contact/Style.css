@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif, Verdana, Geneva, Tahoma, sans-serif;
+}
+html{
+    scroll-behavior:smooth
+}
+
+body{
+    font-size: 1.2em;
+    background-color: #cbcbcb;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 40' width='80' height='40'%3E%3Cpath fill='%23ffffff' fill-opacity='0.08' d='M0 40a19.96 19.96 0 0 1 5.9-14.11 20.17 20.17 0 0 1 19.44-5.2A20 20 0 0 1 20.2 40H0zM65.32.75A20.02 20.02 0 0 1 40.8 25.26 20.02 20.02 0 0 1 65.32.76zM.07 0h20.1l-.08.07A20.02 20.02 0 0 1 .75 5.25 20.08 20.08 0 0 1 .07 0zm1.94 40h2.53l4.26-4.24v-9.78A17.96 17.96 0 0 0 2 40zm5.38 0h9.8a17.98 17.98 0 0 0 6.67-16.42L7.4 40zm3.43-15.42v9.17l11.62-11.59c-3.97-.5-8.08.3-11.62 2.42zm32.86-.78A18 18 0 0 0 63.85 3.63L43.68 23.8zm7.2-19.17v9.15L62.43 2.22c-3.96-.5-8.05.3-11.57 2.4zm-3.49 2.72c-4.1 4.1-5.81 9.69-5.13 15.03l6.61-6.6V6.02c-.51.41-1 .85-1.48 1.33zM17.18 0H7.42L3.64 3.78A18 18 0 0 0 17.18 0zM2.08 0c-.01.8.04 1.58.14 2.37L4.59 0H2.07z'%3E%3C/path%3E%3C/svg%3E");   
+}
+
+header{
+    background-color: #cbcbcb;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 40' width='80' height='40'%3E%3Cpath fill='%23ffffff' fill-opacity='0.08' d='M0 40a19.96 19.96 0 0 1 5.9-14.11 20.17 20.17 0 0 1 19.44-5.2A20 20 0 0 1 20.2 40H0zM65.32.75A20.02 20.02 0 0 1 40.8 25.26 20.02 20.02 0 0 1 65.32.76zM.07 0h20.1l-.08.07A20.02 20.02 0 0 1 .75 5.25 20.08 20.08 0 0 1 .07 0zm1.94 40h2.53l4.26-4.24v-9.78A17.96 17.96 0 0 0 2 40zm5.38 0h9.8a17.98 17.98 0 0 0 6.67-16.42L7.4 40zm3.43-15.42v9.17l11.62-11.59c-3.97-.5-8.08.3-11.62 2.42zm32.86-.78A18 18 0 0 0 63.85 3.63L43.68 23.8zm7.2-19.17v9.15L62.43 2.22c-3.96-.5-8.05.3-11.57 2.4zm-3.49 2.72c-4.1 4.1-5.81 9.69-5.13 15.03l6.61-6.6V6.02c-.51.41-1 .85-1.48 1.33zM17.18 0H7.42L3.64 3.78A18 18 0 0 0 17.18 0zM2.08 0c-.01.8.04 1.58.14 2.37L4.59 0H2.07z'%3E%3C/path%3E%3C/svg%3E");   
+    height: 75px;
+    width: 100%;
+}   
+@media screen and (min-width:800px){
+    .icon, .btn{
+        display: none;
+    }
+}
+
+.navbar{
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 20px;
+}
+.nav-menu{
+    display: flex;
+    align-items: center;
+    
+}
+.nav-item{
+    list-style-type: none;
+    padding: 0 10px 0 10px;
+    
+}
+.home-link{
+    text-decoration: none;
+    font-size: 1.3em;
+    color: black;
+}
+.home-link:hover{
+    color: brown;
+}
+#bloomlogo{
+    width: 30%;
+}
+.bloomlogo{
+    display: none;
+}
+#query{
+    border-radius: 40px;
+    border: white;
+    width: 200px;
+    height: 30px;
+    top: 25px;
+    right: 25px;
+    position: absolute;
+}
+h1{
+    text-align: center;
+    color: black;
+    size: 1.2em;
+    padding-top: 50px;
+}
+.box-civ-name{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 100px 50px 50px 50px;
+}
+.box-check{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    gap: 20px;
+    size: 1.2em;
+}
+.civ-name{
+    border-radius: 20px;
+    box-shadow : 0px 0px 14px -2px rgba(0,0,0,0.5);
+    border: 0px transparent;
+    width: 150px;
+    height: 25px; 
+}
+button:hover{
+    background-color: grey;
+}
+@media screen and (max-width:800px){
+    .icon{
+        cursor: pointer;
+    }
+    .navbar, #btn, .nav-menu{
+        display: none; /*permet de cacher l'input de la navbar (la checkbox cochable)*/
+    }
+    [id^=btn]:checked + .nav-menu{   /* ^= veulent dire commence par suivi de btn pour aller chercher tout les id commancant par btn checked pour dire que lorsqu'il est cocher ont applique a l'ul display block*/
+        display: block;
+        
+    }
+    .nav-menu{
+        background-color: #cbcbcbb6;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 40' width='80' height='40'%3E%3Cpath fill='%23ffffff' fill-opacity='0.08' d='M0 40a19.96 19.96 0 0 1 5.9-14.11 20.17 20.17 0 0 1 19.44-5.2A20 20 0 0 1 20.2 40H0zM65.32.75A20.02 20.02 0 0 1 40.8 25.26 20.02 20.02 0 0 1 65.32.76zM.07 0h20.1l-.08.07A20.02 20.02 0 0 1 .75 5.25 20.08 20.08 0 0 1 .07 0zm1.94 40h2.53l4.26-4.24v-9.78A17.96 17.96 0 0 0 2 40zm5.38 0h9.8a17.98 17.98 0 0 0 6.67-16.42L7.4 40zm3.43-15.42v9.17l11.62-11.59c-3.97-.5-8.08.3-11.62 2.42zm32.86-.78A18 18 0 0 0 63.85 3.63L43.68 23.8zm7.2-19.17v9.15L62.43 2.22c-3.96-.5-8.05.3-11.57 2.4zm-3.49 2.72c-4.1 4.1-5.81 9.69-5.13 15.03l6.61-6.6V6.02c-.51.41-1 .85-1.48 1.33zM17.18 0H7.42L3.64 3.78A18 18 0 0 0 17.18 0zM2.08 0c-.01.8.04 1.58.14 2.37L4.59 0H2.07z'%3E%3C/path%3E%3C/svg%3E");
+        position: absolute;
+        top: 70px;
+        width: 100%;    
+    }
+    .navbar{
+        align-items: center;
+    }
+    .icon, .btn{
+        display: block;
+        padding: 10px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+    a{
+        font-size: 1em;
+    }
+    .nav-item{
+        padding-bottom: 10px;
+        padding-top: 20px;
+    }
+    .bloomlogo{
+        display:block;
+        max-width: auto;
+        height: 60px;
+        padding-right: 40%;
+        width: 50%;
+    }
+    .navbar{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
+@media screen and (max-width:767px){
+    .box-civ-name, .box-check{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        padding-top: 30px;
+    }
+    .box-check{
+        padding-top: 10px;
+    }
+}
+@media screen and (max-width:540px){
+    #query{
+        width: 150px;
+        height: 25px;
+        top: 25px;
+        right: 20px;
+    }
+    .bloomlogo{
+        padding-left: 13%;
+    }
+}
